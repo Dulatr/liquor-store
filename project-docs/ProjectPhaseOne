@@ -1,0 +1,36 @@
+########## LIQUOR STORE PHASE 1 ##########
+
+~~~~ Description ~~~~
+
+Over the course of multiple phases, we will gradually build a program that simulates a Liquor Store.
+In this first phase, we will define a basic product model and implement a simple inventory
+management system. The first bit of code has been provided for you to get you started. Below are
+the requirements for the program. This phase is complete when you have met all of the requirements.
+
+~~~~ Requirements ~~~~
+
+ - The program should define a what a product is.
+ - The program should keep track of what products have been created and the quantities
+     of each product in the inventory.
+ - The program should display a list of commands and prompt the user for their command
+     in a loop until the user exits the program.
+ - If the user enters the "help" command...
+        - the program should display the list of commands again.
+ - If the user enters the "create" command...
+        - the program should prompt the user for the data needed to create a new product.
+ - If the use enters the "add" command...
+        - the program should prompt the user for a product and a quantity to add to the inventory.
+        - the program should notify the user if the product does not exist.
+ - If the user enters the "remove" command...
+        - the program should prompt the user for a product and a quantity to remove from the inventory.
+        - the program should notify the user if the product does not exist or if there is not enough
+            quantity in the inventory to perform the remove operation.
+ - If the user enters the "get" command...
+        - the program should prompt the user for a product and display the quantity of that product
+            in the inventory.
+ - If the user enters the "exit" command...
+        - the program should end.
+ - If the user enters anything else...
+        - the program should notify the user the command is invalid.
+ - After the program completes processing the user's command (except the "exit" command),
+     it should ask the user for another command.
