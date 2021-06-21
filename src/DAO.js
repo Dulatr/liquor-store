@@ -9,6 +9,10 @@ class DAO {
         return this.inventory.value;
     }
 
+    getItems() {
+        return this.inventory.items;
+    }
+
     addItem(_item) {
 
         if (this.inventory.items.some((x) => x.name == _item.name)) {

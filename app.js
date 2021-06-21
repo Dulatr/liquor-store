@@ -6,7 +6,15 @@ class App extends React.Component {
 
         this.state = {product_list:testdata};
         this.DAO = new DAO(testdata);
-        console.log(this.DAO.inventory);
+
+        this.addItem = this.addItem.bind(this);
+    }
+
+    addItem(_item){
+        this.DAO.addItem(_item);
+        this.setState({
+            product_list:this.DAO.getItems()
+        });
     }
 
     render() {
@@ -14,8 +22,14 @@ class App extends React.Component {
         soda.imgURI = "assets/img/coca-cola.jpg";
         
         return React.createElement(
-            Product_Tile,
-            { item:soda }
+            'div',
+            null,
+            React.createElement('button',{onClick:()=>this.addItem(cola)},"add soda"),
+            React.createElement(Product_Tile, { item:this.state.product_list[0]}),
+            React.createElement('button',{onClick:()=>this.addItem(cleaner)},"add cleaner"),
+            React.createElement(Product_Tile, { item:this.state.product_list[1]}),
+            React.createElement('button',{onClick:()=>this.addItem(towels)},"add towels"),
+            React.createElement(Product_Tile, { item:this.state.product_list[2]}),            
         );
     }
 }
